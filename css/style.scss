@@ -1,0 +1,233 @@
+$theme-color:#8DC8E7;
+$btn-color:#FF5470;
+
+// annual------------
+html{
+  font-size: 62.5%;
+  margin:0;
+  padding:0;
+}
+
+body{
+  margin:0;
+  padding:0;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+li{
+  list-style: none;
+  display:block;
+}
+
+img{
+  vertical-align: bottom;
+}
+
+.wrapper{
+  max-width:1000px;
+  margin:0 auto;
+  padding:30px 10px;
+  justify-content: space-between;
+}
+
+.flex{
+  display: flex;
+}
+
+.section__title{
+  padding-bottom: 50px;
+  text-align: center;
+  font-size:4rem;
+  // border-bottom: 1px solid $theme-color;
+}
+
+p{
+  font-size:1.6rem;
+}
+
+a{
+  text-decoration: none;
+}
+
+.section__left,.section__right{
+  width:45%;
+}
+
+.section__sentence{
+  padding:10px 20px;
+}
+
+// header----------------
+header{
+  text-align: center;
+  width:100%;
+  h1{
+    max-width:1000px;
+    margin:0 auto;
+  }
+}
+
+.nav__top{
+  background-color: $theme-color;
+  height:40px;
+  line-height: 40px;
+  font-size:1.5rem;
+  color:white;
+  position: relative;
+  ul{
+    width:500px;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    li{
+      padding-right:30px;
+      &::after{
+        content:"|";
+        display: inline-block;
+        margin-left:30px;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+
+// burger
+.burger{
+  position: absolute;
+  margin-top: 5px;
+  border-radius: 8px;
+  right:5px;
+  width:30px;
+  height:30px;
+  background: white;
+  span{
+    position: absolute;
+    display: block;
+    content: "";
+    background: black;
+    height:2px;
+    width:20px;
+    border-radius:10px;
+    margin-left:5px;
+    }
+    .bar__mid{
+      top:14px;
+    }
+    .bar__top{
+      top:5px;
+    }
+    .bar__bottom{
+      bottom:5px;
+    }
+  }
+
+  // スマホの時のナビゲーションメニュー
+  .nav__media{
+    display: none;
+    position:fixed;
+    z-index: 2;
+    top:0;
+    width:100%;
+    height:100vh;
+    background-color: rgba(0,0,0,0.8);
+    ul{
+      padding-top:150px;
+      li{
+        text-align: center;
+        font-size: 2rem;
+        padding-top:3rem;
+
+        a{
+          color:white;
+        }
+      }
+    }
+  }
+
+
+// main
+.main{
+  background:url(../img/fv.jpeg);
+  background-size: cover;
+  width:100%;
+  height:80vh;
+  position:relative;
+  z-index: 0;
+  &::after{
+    content: "";
+    position: absolute;
+    width:100%;
+    height:100%;
+    background: inherit;
+    filter:brightness(75%);
+    z-index: -1;
+  }
+  h1{
+    position: absolute;
+    bottom: 10%;
+    right:10%;
+    color:white;
+    font-size: 4rem;
+    text-shadow: 0 2px 2px #666;
+  }
+}
+
+// them
+.team__right{
+  text-align: center;
+}
+
+.section__img{
+  max-width:100%;
+}
+
+// practice
+.practice{
+  background-color: $theme-color;
+}
+
+
+// footer
+footer{
+  background-color: $theme-color;
+  text-align: center;
+  height:50px;
+  line-height: 50px;
+}
+
+.btn{
+  width:150px;
+  height:40px;
+  font-size:1.5rem;
+  font-weight: bolder;
+  line-height: 40px;
+  background-color: $btn-color;
+  text-align: center;
+  border-radius: 20px;
+  color:white;
+  margin-top: 15px;
+  margin:20px auto;
+}
+
+
+@media(max-width:600px){
+
+  .nav__top{
+    ul{
+      display: none;
+    }
+  }
+
+  .flex{
+    flex-direction: column;
+    div{
+      width:100%;
+    }
+  }
+
+  #practice{
+    flex-direction: column-reverse;
+  }
+
+}
