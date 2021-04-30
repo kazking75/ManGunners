@@ -147,8 +147,56 @@ header h1 {
   color: white;
 }
 
+.fv {
+  width: 100%;
+  height: 80vh;
+}
+
+.fv .fv__box {
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  z-index: 0;
+}
+
+.fv .fv__box::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: brightness(75%);
+  z-index: -1;
+}
+
+.fv .fv__1 {
+  background-image: url(../img/fv__1.jpg);
+  position: relative;
+}
+
+.fv .fv__1 h1 {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  color: white;
+  font-size: 4rem;
+  text-shadow: 0 2px 2px #666;
+}
+
+.fv .fv__2 {
+  background-image: url(../img/fv__2.jpg);
+}
+
+.fv .fv__3 {
+  background-image: url(../img/fv__3.jpg);
+}
+
 .main {
-  background: url(../img/fv.jpeg);
+  background-image: url(../img/fv__1.jpg);
   background-size: cover;
   width: 100%;
   height: 80vh;
