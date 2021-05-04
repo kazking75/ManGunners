@@ -106,6 +106,8 @@ header h1 {
 }
 
 .burger {
+  z-index: 100;
+  display: none;
   position: absolute;
   margin-top: 5px;
   border-radius: 8px;
@@ -116,6 +118,7 @@ header h1 {
 }
 
 .burger span {
+  transition: all .4s;
   position: absolute;
   display: block;
   content: "";
@@ -136,6 +139,14 @@ header h1 {
 
 .burger .bar__bottom {
   bottom: 5px;
+}
+
+.bar__top__rotate {
+  transform: translateY(9px) rotate(405deg);
+}
+
+.bar__bottom__rotate {
+  transform: translateY(-9px) rotate(-405deg);
 }
 
 .nav__media {
@@ -294,9 +305,15 @@ footer {
 }
 
 @media (max-width: 600px) {
+  .nav__top ul {
+    display: none;
+  }
   .nav__top ul li {
     padding-left: 8px;
     padding-right: 8px;
+  }
+  .nav__top .burger {
+    display: block;
   }
   .flex {
     flex-direction: column;

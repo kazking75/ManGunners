@@ -1,3 +1,4 @@
+// fvのスライダー
 $(".fv").slick({
   autoplay:true,
   arrows: false,
@@ -9,4 +10,17 @@ $(".fv").slick({
     pauseOnFocus: false,
     pauseOnHover: false,
     pauseOnDotsHover: false,
+});
+
+
+// ハンバーガーメニューの動き
+$(".burger").click(function(){
+  $(".bar__mid").toggle();
+  $(".bar__top").toggleClass("bar__top__rotate");
+  $(".bar__bottom").toggleClass("bar__bottom__rotate");
+  $(".nav__media").toggle();
+});
+
+$(".nav__media").click(function(){
+  $(".nav__media").toggle();
 });

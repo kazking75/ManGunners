@@ -107,6 +107,8 @@ header{
 
 // burger
 .burger{
+  z-index: 100;;
+  display:none;
   position: absolute;
   margin-top: 5px;
   border-radius: 8px;
@@ -115,6 +117,7 @@ header{
   height:30px;
   background: white;
   span{
+    transition:all .4s;
     position: absolute;
     display: block;
     content: "";
@@ -133,6 +136,15 @@ header{
     .bar__bottom{
       bottom:5px;
     }
+  }
+
+  //burger押した時(toggleClass)
+  .bar__top__rotate{
+    transform:translateY(9px) rotate(405deg) ;
+  }
+
+  .bar__bottom__rotate{
+    transform:translateY(-9px) rotate(-405deg) ;
   }
 
   // スマホの時のナビゲーションメニュー
@@ -295,11 +307,14 @@ footer{
 
   .nav__top{
     ul{
-      // display: none;
+      display: none;
       li{
         padding-left:8px;
         padding-right:8px;
       }
+    }
+    .burger{
+      display:block;
     }
   }
 
