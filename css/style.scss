@@ -35,10 +35,10 @@ img{
 }
 
 .section__title{
-  padding-bottom: 50px;
+  margin-bottom: 50px;
   text-align: center;
   font-size:4rem;
-  // border-bottom: 1px solid $theme-color;
+  border-bottom: 2px solid $theme-color;
 }
 
 p{
@@ -62,6 +62,7 @@ a{
 header{
   text-align: center;
   width:100%;
+  padding-top:4px;
   h1{
     max-width:1000px;
     margin:0 auto;
@@ -76,10 +77,11 @@ header{
   color:white;
   position: relative;
   ul{
-    width:500px;
+    max-width:500px;
     margin:0 auto;
     display: flex;
     justify-content: space-between;
+    text-align: center;
     li{
       padding-right:30px;
       &::after{
@@ -220,7 +222,7 @@ header{
   }
 }
 
-// them
+// team
 .team__right{
   text-align: center;
 }
@@ -232,6 +234,14 @@ header{
 // practice
 .practice{
   background-color: $theme-color;
+}
+
+.section__blue{
+  border-bottom:2px solid white;
+}
+
+.circle::after{
+  content: "○";
 }
 
 
@@ -262,7 +272,11 @@ footer{
 
   .nav__top{
     ul{
-      display: none;
+      // display: none;
+      li{
+        padding-left:8px;
+        padding-right:8px;
+      }
     }
   }
 

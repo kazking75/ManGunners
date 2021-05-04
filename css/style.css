@@ -32,9 +32,10 @@ img {
 }
 
 .section__title {
-  padding-bottom: 50px;
+  margin-bottom: 50px;
   text-align: center;
   font-size: 4rem;
+  border-bottom: 2px solid #8DC8E7;
 }
 
 p {
@@ -57,6 +58,7 @@ a {
 header {
   text-align: center;
   width: 100%;
+  padding-top: 4px;
 }
 
 header h1 {
@@ -74,10 +76,11 @@ header h1 {
 }
 
 .nav__top ul {
-  width: 500px;
+  max-width: 500px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  text-align: center;
 }
 
 .nav__top ul li {
@@ -236,6 +239,14 @@ header h1 {
   background-color: #8DC8E7;
 }
 
+.section__blue {
+  border-bottom: 2px solid white;
+}
+
+.circle::after {
+  content: "○";
+}
+
 footer {
   background-color: #8DC8E7;
   text-align: center;
@@ -258,8 +269,9 @@ footer {
 }
 
 @media (max-width: 600px) {
-  .nav__top ul {
-    display: none;
+  .nav__top ul li {
+    padding-left: 8px;
+    padding-right: 8px;
   }
   .flex {
     flex-direction: column;
