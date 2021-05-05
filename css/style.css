@@ -3,12 +3,12 @@ html {
   font-size: 62.5%;
   margin: 0;
   padding: 0;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
 }
 
 li {
@@ -302,6 +302,17 @@ footer {
   color: white;
   margin-top: 15px;
   margin: 20px auto;
+}
+
+#page__top {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: black;
+  font-size: 2rem;
+  opacity: 0.3;
 }
 
 @media (max-width: 600px) {

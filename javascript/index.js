@@ -24,3 +24,21 @@ $(".burger").click(function(){
 $(".nav__media").click(function(){
   $(".nav__media").toggle();
 });
+
+// topに戻るボタン
+$(function(){
+  var pageTop = $("#page__top");
+  pageTop.hide();
+  $(window).scroll(function(){
+    if($(this).scrollTop() > 100){
+      pageTop.fadeIn();
+    }else{
+      pageTop.fadeOut();
+    }
+  });
+  pageTop.click(function(){
+    $("body, html").animate({scrollTop:0 } ,300);
+    return false;
+  })
+
+});
